@@ -2,20 +2,21 @@ import React from "react";
 
 const AddTransactions = () => {
   return (
-    <div>
-      <h3>Add a new transaction</h3>
-      <form>
-        <div>
-          <label htmlFor="text">Description</label>
-          <input type="text" placeholder="Enter text..." />
-        </div>
-        <div class="form-control">
-          <label htmlFor="amount">Amount</label>
-          <input type="number" placeholder="Enter amount..." />
-        </div>
-        <button>Add transaction</button>
-      </form>
-    </div>
+    <form>
+      <div className="form-control">
+        <label htmlFor="text" className="label">
+          Description
+        </label>
+        <input type="text" className="text" placeholder="Enter text..." />
+      </div>
+      <div class="form-control">
+        <label htmlFor="amount" className="label">
+          Amount
+        </label>
+        <input type="number" className="amount" placeholder="Enter amount..." />
+      </div>
+      <button className="button">Add transaction</button>
+    </form>
   );
 };
 

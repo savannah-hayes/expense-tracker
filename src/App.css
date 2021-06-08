@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+.form-control,
+.income-expense-container div {
+  text-align: center;
+}
+
+.income-container,
+.expense-container {
+  padding: 20px;
+  color: white;
+  border: transparent;
+  border-radius: 20px;
+  height: 130px;
+  width: 160px;
+}
+
+body {
+  background-color: #5c5c5c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 30px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.income-expense {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.income-expense-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.income-expense-container div {
+  flex: 1;
+}
+
+.income-expense-container > div:first-of-type {
+  border-right: 1px solid #cbcbcb;
+}
+
+.income-container {
+  background-color: #34d778;
+}
+
+.expense-container {
+  background-color: #e1594a;
+}
+
+.header {
+  margin-top: 15px;
+}
+
+.text,
+.amount {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  display: block;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.label {
+  margin-left: 3px;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0 10px 3px;
+}
+
+.button {
+  cursor: pointer;
+  border: transparent;
+  border-radius: 5px;
+  background-color: rgb(104, 185, 187);
+  color: rgb(255, 255, 255);
+  display: block;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0 20px;
+}
+
+.button:hover {
+  background-color: rgb(103, 103, 103);
+}

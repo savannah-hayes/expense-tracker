@@ -13,6 +13,7 @@ function App() {
       <div className="container">
         <Balance />
         <Accounts />
+        <h3>Add a new transaction</h3>
         <AddTransactions />
         <Transactions />
       </div>

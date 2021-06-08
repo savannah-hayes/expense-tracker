@@ -4,7 +4,7 @@ const Transactions = () => {
   return (
     <div>
       <h3>Transactions</h3>
-      <ul>
+      <ul className="transactions">
         <li></li>
       </ul>
     </div>
