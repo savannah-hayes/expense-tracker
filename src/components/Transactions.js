@@ -1,15 +1,19 @@
 import React from "react";
 
-const Transactions = (props) => {
-  const sign = props.amount < 0 ? "-" : "+";
+const Transactions = ({ transaction, deleteTransaction }) => {
+  const sign = transaction.amount < 0 ? "-" : "+";
+  const amount = sign + Math.abs(transaction.amount);
 
   return (
-    <li className={props.amount < 0 ? "minus" : "plus"}>
-      {props.text}
-      <span>
-        {sign}${Math.abs(props.amount)}
-      </span>
-      <button className="delete-button">X</button>
+    <li className={transaction.amount < 0 ? "minus" : "plus"}>
+      {transaction.text}
+      <span>{amount}</span>
+      <button
+        className="delete-button"
+        onClick={() => deleteTransaction(transaction.id)}
+      >
+        X
+      </button>
     </li>
   );
 };

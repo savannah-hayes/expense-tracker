@@ -1,16 +1,17 @@
 import React from "react";
 import Transactions from "./Transactions";
 
-const TransactionList = (props) => {
+const TransactionList = ({ transactions, deleteTransaction }) => {
   return (
     <div>
       <h3>Transactions</h3>
       <ul className="transactions">
-        {props.data.map((transactions, index) => (
-          <div key={index}>
+        {transactions.map((transaction) => (
+          <div>
             <Transactions
-              amount={transactions.amount}
-              text={transactions.text}
+              transaction={transaction}
+              deleteTransaction={deleteTransaction}
+              key={transaction.id}
             />
           </div>
         ))}

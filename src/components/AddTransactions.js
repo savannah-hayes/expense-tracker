@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 
-const AddTransactions = () => {
+const AddTransactions = ({ addTransaction }) => {
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+  };
+
+  const newTransaction = (event) => {
+    const newTransaction = {
+      id: Math.floor(Math.random() * 100000000),
+      text: text,
+      amount: +amount,
+    };
+
+    addTransaction(newTransaction);
+  };
 
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="form-control">
         <label htmlFor="text" className="label">
           Description
@@ -30,7 +44,9 @@ const AddTransactions = () => {
           placeholder="Enter amount..."
         />
       </div>
-      <button className="button">Add transaction</button>
+      <button className="button" onClick={newTransaction}>
+        Add transaction
+      </button>
     </form>
   );
 };
