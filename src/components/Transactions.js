@@ -1,13 +1,16 @@
 import React from "react";
 
-const Transactions = () => {
+const Transactions = (props) => {
+  const sign = props.amount < 0 ? "-" : "+";
+
   return (
-    <div>
-      <h3>Transactions</h3>
-      <ul className="transactions">
-        <li></li>
-      </ul>
-    </div>
+    <li className={props.amount < 0 ? "minus" : "plus"}>
+      {props.text}
+      <span>
+        {sign}${Math.abs(props.amount)}
+      </span>
+      <button className="delete-button">X</button>
+    </li>
   );
 };
 

@@ -110,6 +110,30 @@ label {
   margin: 10px 0 10px 3px;
 }
 
+.transactions {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.transactions li {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+li.plus {
+  border-right: 5px solid #34d778;
+}
+
+li.minus {
+  border-right: 5px solid #e1594a;
+}
+
 .button {
   cursor: pointer;
   border: transparent;
@@ -124,5 +148,19 @@ label {
 }
 
 .button:hover {
-  background-color: rgb(103, 103, 103);
+  background-color: rgb(85, 187, 189);
+}
+
+.delete-button {
+  cursor: pointer;
+  background-color: rgb(104, 185, 187);
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
 }
